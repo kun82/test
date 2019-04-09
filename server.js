@@ -1,6 +1,7 @@
 const express = require('express')
 const hbs = require('hbs')
 const fs =require ('fs')
+const port = process.env.PORT|| 3000
 
 //nodemon server.js -e js.hbs
 var app = express()
@@ -77,10 +78,7 @@ app.get('/bad',(req,res)=>{
 })
 
 
+app.listen(port,()=>{
 
-
-//setup listening to localhost port no.3000
-app.listen(3000,()=>{
-
-    console.log ('Server is up on port：3000')
+    console.log (`Server port ${port}`)
 })
