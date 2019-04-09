@@ -67,7 +67,6 @@ app.get('/about',(req,res)=>{
     res.render('about.hbs',{
         // dynamic data pass into home.hbs
         pageTitle: 'About Page',
-        CurrentYear: new Date().getFullYear()
     })
 })
 //send back jason with error message
@@ -76,6 +75,16 @@ app.get('/bad',(req,res)=>{
         ErrorMessage:'WAH PIANG AYE'
     })
 })
+
+app.get('/project',(req,res)=>{
+    
+    res.render('project.hbs',{
+        pageTitle: 'Project Page',
+
+        // dynamic data pass into project.hbs
+    })
+})
+
 
 
 app.listen(port,()=>{
